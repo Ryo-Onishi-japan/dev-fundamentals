@@ -64,13 +64,13 @@ GoogleのAI「Gemini」をコマンドラインから使うツールです。
 -->
 
 ```bash
-npm install -g @anthropic-ai/gemini-cli
+npm install -g @google/gemini-cli
 # ↑ npm (Node Package Manager) でGemini CLIをインストール
 #   npm: Node.jsのパッケージ管理ツール
 #   install: パッケージをインストール
 #   -g: グローバルインストール（システム全体で使用可能）
 #       -gなしだと現在のプロジェクト内のみにインストール
-#   @anthropic-ai/gemini-cli: パッケージ名（@組織名/パッケージ名の形式）
+#   @google/gemini-cli: パッケージ名（@組織名/パッケージ名の形式）
 ```
 
 > **APIキー不要** - 初回起動時にGoogleアカウントでログインするだけで利用可能
