@@ -1,0 +1,29 @@
+# セットアップ用スクリプト
+
+# cc-sdd設定
+.kiro/settings/
+
+# AIツール設定
+.claude/
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# IDE
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
