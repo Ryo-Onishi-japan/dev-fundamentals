@@ -73,7 +73,74 @@ npm install -g @google/gemini-cli
 #   @google/gemini-cli: パッケージ名（@組織名/パッケージ名の形式）
 ```
 
-> **APIキー不要** - 初回起動時にGoogleアカウントでログインするだけで利用可能
+#### 初期設定（Google AI Studio連携）
+
+```bash
+# 1. 初回起動
+gemini
+# ↑ 初回起動時にブラウザが開き、Googleアカウントでログインを求められます
+#   ログイン後、自動的にAPIキーが設定されます
+
+# 2. 動作確認
+gemini --version
+# ↑ バージョンが表示されれば設定完了
+```
+
+> **💡 Google AI Studio について**
+> - https://aistudio.google.com/ にアクセスして事前にアカウント作成も可能
+> - 無料枠で利用可能（1分あたりのリクエスト制限あり）
+
+#### APIキーをローカルファイルで管理
+
+```bash
+# 1. テンプレートをコピー
+cp .env.example .env
+# ↑ .env.example を .env にコピー
+#   .env はgitignoreされているのでAPIキーが漏れる心配なし
+
+# 2. .envファイルを編集してAPIキーを設定
+# GEMINI_API_KEY=your-actual-api-key-here
+```
+
+> **⚠️ セキュリティ注意**: `.env` ファイルは `.gitignore` に登録済み。絶対にGitにコミットしないこと！
+
+#### .envrc と direnv による自動読み込み
+
+<!--
+💡 direnv / .envrc とは？
+========================
+direnvはディレクトリ単位で環境変数を自動設定するツールです。
+.envrcファイルに設定を記述し、そのディレクトリに入ると自動で環境変数が読み込まれます。
+direnvをインストールすると、ディレクトリ移動時に自動で環境が設定されます。
+-->
+
+このリポジトリには `.envrc` ファイルが用意されています：
+
+```bash
+# .envrc の内容
+dotenv
+# ↑ dotenvコマンドで.envファイルを自動読み込み
+#   ディレクトリに入るたびに環境変数が自動設定されます
+```
+
+**direnvのセットアップ（初回のみ）**:
+
+```bash
+# 1. direnvをインストール
+sudo apt install direnv  # Linux/WSL2の場合
+brew install direnv      # Macの場合
+
+# 2. シェル設定を追加（bash の場合）
+echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
+source ~/.bashrc
+
+# 3. このディレクトリで許可
+cd /path/to/ai_coding_practice
+direnv allow
+# ↑ このディレクトリの.envrcを信頼して実行することを許可
+```
+
+> **💡 ヒント**: `direnv allow` を一度実行すれば、以降はディレクトリに入るだけで `.env` の環境変数が自動で読み込まれます。
 
 ### 3. GitHub CLI
 

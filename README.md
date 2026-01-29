@@ -8,10 +8,10 @@
 
 | # | ファイル | 内容 |
 |---|----------|------|
-| 1 | **[SETUP.md](SETUP.md)** | 環境構築（Node.js、Gemini CLI、GitHub CLI） |
-| 2 | **[TUTORIAL.md](TUTORIAL.md)** | 統合チュートリアル（従業員管理システム） |
-| 3 | **[PROMPTS.md](PROMPTS.md)** | コピペで使えるプロンプト集 |
-| 4 | **[FUTURE_WORK.md](FUTURE_WORK.md)** | 今後の学習項目（Claude Code、Codex CLIなど） |
+| 1 | **[SETUP.md](docs/SETUP.md)** | 環境構築（Node.js、Gemini CLI、GitHub CLI） |
+| 2 | **[TUTORIAL.md](docs/TUTORIAL.md)** | 統合チュートリアル（従業員管理システム） |
+| 3 | **[PROMPTS.md](docs/PROMPTS.md)** | コピペで使えるプロンプト集 |
+| 4 | **[FUTURE_WORK.md](docs/FUTURE_WORK.md)** | 今後の学習項目（Claude Code、Codex CLIなど） |
 
 ---
 
